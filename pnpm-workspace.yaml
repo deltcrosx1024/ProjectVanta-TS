@@ -7,3 +7,5 @@ ignoredBuiltDependencies:
 
 onlyBuiltDependencies:
   - '@tailwindcss/oxide'
+  - contentlayer2
+  - rome
