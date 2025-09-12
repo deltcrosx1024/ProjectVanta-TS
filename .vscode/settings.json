@@ -1,0 +1,6 @@
+{
+    "sonarlint.connectedMode.project": {
+        "connectionId": "sonarqube-cnn-001",
+        "projectKey": "deltcrosx1024_ProjectVanta-TS"
+    }
+}
