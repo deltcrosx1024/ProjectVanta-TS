@@ -6,6 +6,7 @@ ignoredBuiltDependencies:
   - unrs-resolver
 
 onlyBuiltDependencies:
+  - '@swc/core'
   - '@tailwindcss/oxide'
   - contentlayer2
   - rome

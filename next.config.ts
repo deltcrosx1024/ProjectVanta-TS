@@ -6,7 +6,14 @@ const { withContentlayer } = require("next-contentlayer");
 const nextConfig: NextConfig = {
   /* config options here */
   reactStrictMode: true,
-  swcMinify: true,
+  turbopack: {
+    rules: {
+      '*.svg': {
+        loaders: ['@svgr/webpack'],
+        as: 'asset/resource',
+      },
+    },
+  },
 };
 
 export default withContentlayer(nextConfig);
