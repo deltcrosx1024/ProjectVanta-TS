@@ -11,6 +11,8 @@
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
   --font-custom: var(--font-saira);
+  --font-custom: var(--font-ibm-plex);
+  --font-custom-mono: var(--font-ibm-plex-mono);
 }
 
 @media (prefers-color-scheme: dark) {

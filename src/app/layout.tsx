@@ -1,11 +1,25 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Saira } from "next/font/google";
+import { Geist, Geist_Mono, Saira, IBM_Plex_Sans, IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
 
 const saira = Saira({
   variable: "--font-saira",
   subsets: ["latin"],
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  style: ["normal", "italic"],
+});
+
+const ibmPlex = IBM_Plex_Sans({
+  variable: "--font-ibm-plex",
+  subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700"],
+  style: ["normal", "italic"],
+});
+
+const ibmPlexMono = IBM_Plex_Mono({
+  variable: "--font-ibm-plex-mono",
+  subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700"],
   style: ["normal", "italic"],
 });
 
@@ -32,7 +46,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${ibmPlex.variable} ${ibmPlexMono.variable} antialiased`}
       >
         {children}
       </body>
