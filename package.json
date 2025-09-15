@@ -9,6 +9,8 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@headlessui/react": "^2.2.8",
+    "@heroicons/react": "^2.2.0",
     "@next/font": "^14.2.15",
     "@next/mdx": "^15.5.3",
     "@upstash/redis": "^1.35.3",
