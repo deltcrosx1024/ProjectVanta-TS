@@ -10,7 +10,7 @@ const navigation = [
   { name: 'Contacts', href: '/contacts' },
 ]
 
-export default function Home() {
+export default function profiles() {
  
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
     return (

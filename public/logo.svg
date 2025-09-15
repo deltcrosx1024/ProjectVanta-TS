@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <!-- Outer black circle -->
+  <circle cx="100" cy="100" r="95" fill="black"/>
+  
+  <!-- Inner white ring -->
+  <circle cx="100" cy="100" r="85" fill="none" stroke="white" stroke-width="4"/>
+  
+  <!-- IBM Plex Sans Bold "D" as centered vector path -->
+  <path d="M0 0h27.5c11.8 0 21.1 2.9 27.9 8.6 6.8 5.8 10.2 13.9 10.2 24.4 0 10.6-3.4 18.7-10.2 24.4-6.8 5.7-16.1 8.6-27.9 8.6H0V0Zm15.8 12.8v40.4h11.4c6.9 0 12.2-1.7 15.8-5.1 3.6-3.4 5.5-8.2 5.5-14.6 0-6.4-1.8-11.3-5.5-14.7-3.6-3.4-8.9-5.1-15.8-5.1H15.8Z"
+        fill="white"
+        transform="translate(95,100) scale(1.3) translate(-25,-35)"/>
+</svg>

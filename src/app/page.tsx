@@ -1,16 +1,13 @@
 'use client';
 
-import Link from 'next/link';
-import { Metadata } from 'next';
-import { compareDesc } from 'date-fns';
-import Image from 'next/image';
+import Link from 'next/link'
 import { useState } from 'react'
 import { Dialog, DialogPanel } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 
 const navigation = [
-  { name: 'Projects', href: '#' },
-  { name: 'Contacts', href: '#' },
+  { name: 'Projects', href: '/projects' },
+  { name: 'Contacts', href: '/contacts' },
 ]
 
 
@@ -29,7 +26,7 @@ export default function Home() {
               <span className="sr-only">DeltCrosX</span>
               <img
                 alt=""
-                src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500"
+                src="logo.svg"
                 className="h-8 w-auto"
               />
             </a>
@@ -65,7 +62,7 @@ export default function Home() {
                 <span className="sr-only">DeltCrosX</span>
                 <img
                   alt=""
-                  src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500"
+                  src="logo.svg"
                   className="h-8 w-auto"
                 />
               </a>
@@ -122,7 +119,7 @@ export default function Home() {
           <div className="hidden sm:mb-8 sm:flex sm:justify-center">
             <div className="relative rounded-full px-3 py-1 text-sm/6 text-gray-400 ring-1 ring-white/10 hover:ring-white/20">
               View my profiles and see what I am capable of doing!{' '}
-              <a href="#" className="font-semibold text-indigo-400">
+              <a href="/profiles" className="font-semibold text-indigo-400">
                 <span aria-hidden="true">
                   Read more
                 </span>
@@ -139,12 +136,12 @@ export default function Home() {
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
               <a
-                href="#"
+                href="/contacts"
                 className="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
               >
                 Contact Me!
               </a>
-              <a href="#" className="text-sm/6 font-semibold text-white">
+              <a href="/projects" className="text-sm/6 font-semibold text-white">
                 View Projects <span aria-hidden="true">→</span>
               </a>
             </div>
