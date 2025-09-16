@@ -128,7 +128,7 @@ export default function Home() {
             </div>
           </div>
           <div className="text-center">
-            <h1 className="text-5xl font-semibold tracking-tight text-balance text-white sm:text-7xl">
+            <h1 className="text-5xl font-semibold tracking-tight text-balance text-white sm:text-7xl text-shadow-lg text-shadow-[gray]/50">
               DeltCrosX
             </h1>
             <p className="mt-8 text-lg font-medium text-pretty text-gray-400 sm:text-xl/8">
