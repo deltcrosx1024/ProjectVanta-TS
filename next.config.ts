@@ -1,10 +1,12 @@
-import type { NextConfig } from "next";
-
-const { withContentlayer } = require("next-contentlayer");
+const { withContentlayer } = require('next-contentlayer');
 
 /** @type {import('next').NextConfig} */
-const nextConfig: NextConfig = {
+const nextConfig = {
   /* config options here */
+  pageExtensions: ["js", "jsx", "ts", "tsx", "md", "mdx"],
+	experimental: {
+		mdxRs: true,
+	},
   reactStrictMode: true,
   turbopack: {
     rules: {

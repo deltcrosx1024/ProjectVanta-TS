@@ -22,4 +22,5 @@
 body {
   background: var(--background);
   color: var(--foreground);
+  font-family: 'IBM Plex Sans', sans-serif !important;
 }
