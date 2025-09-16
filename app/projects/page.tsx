@@ -3,6 +3,7 @@ import { Eye } from 'lucide-react';
 import { Redis } from '@upstash/redis';
 import { allProjects } from 'contentlayer/generated';
 import { Article } from './article';
+import { FeaturedArticle } from './featuredarticle';
 import { Header } from '@/app/components/nav';
 import { Card } from '@/app/components/card';
 
@@ -39,12 +40,11 @@ export default async function Projects() {
           );
 
     return (
-        <div className=" relative isolate px-6 pt-14 lg:px-8 justify-center items-center bg-gray-900 w-screen h-screen">
-
+        <div className=" relative isolate px-0 py-3 lg:px-8 lg:py-14 justify-center items-center bg-gray-900">
             {/*Background Clipping*/}
             <div
                 aria-hidden="true"
-                className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
+                className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80 w-screen h-[100%]"
                 >
                 <div
                     style={{
@@ -56,7 +56,7 @@ export default async function Projects() {
             </div>
             {/*Contents*/}
             <Header />
-            <main className="pt-16 lg:pt-24">
+            <main className="pt-0 lg:pt-0">
                 <div className="px-6 pt-20 mx-auto space-y-8 max-w-7xl lg:px-8 md:space-y-16 md:pt-24 lg:pt-32">
                     <div className="max-w-2xl mx-auto lg:mx-0">
                         <h2 className="text-3xl font-bold tracking-tight text-zinc-100 sm:text-4xl">
@@ -67,49 +67,20 @@ export default async function Projects() {
                             software development.
                         </p>
                     </div>
-                    <div className="w-full h-px bg-zinc-800" />
+                    <div className="w-full h-px bg-white" />
                 </div>
             </main>
-            <section className="relative isolate content-center justify-center px-[25%]">
+            <section className="relative isolate content-center justify-center px-[25%] py-[2%]">
                 <div className='grid col-auto row-auto gap-4 flex-[3_1_auto]'>
-                    <div className="grid md:col-auto md:row-2">
-                        <Card>
-                            <Link href={`/projects/${featured?.slug}`}>
-                                <article className="relative w-full h-full p-4 md:p-8">
-                                    <div className="flex items-center justify-between gap-2">
-                                        <div className="text-xs text-zinc-100">
-                                            {featured?.date ?(
-                                                <time dateTime={new Date(featured?.date).toISOString()}>
-                                                    {Intl.DateTimeFormat(undefined, {
-                                                        dateStyle: "medium",
-                                                    }).format(new Date(featured?.date))}
-                                                </time>
-                                            ) : (
-                                                <span>SOON</span>
-                                            )}
-                                        </div>
-                                        <span className='flex items-center gap-1 text-xs text-zinc-500'>
-                                            <Eye className='w-4 h-4'/>{" "}
-                                            {Intl.NumberFormat("en-US", { notation: "compact" }).format(views[featured?.slug] ?? 0)}
-                                        </span>
-                                        <h2 id="featured?-post" className="mt-4 text-3xl font-bold text-zinc-100 group-hover:text-white sm:text-4xl font-display">
-                                            {featured?.title}
-                                        </h2>
-                                        <p className="mt-4 leading-8 duration-150 text-zinc-400 group-hover:text-zinc-300">
-                                            {featured?.description}
-                                        </p>
-                                        <div className="absolute bottom-4 md:bottom-8">
-                                            <p className="hidden text-zinc-200 hover:text-zinc-50 lg:block">
-                                            Read more <span aria-hidden="true">&rarr;</span>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </article>
-                            </Link>
+                    <div className="flex flex-col w-full gap-8 mx-auto border-t border-gray-900/10 lg:mx-0 lg:border-t-0 ">
+                        {[featured].map((project) => (
+                        <Card key={project?.slug}>
+                            <FeaturedArticle project={project} views={views[project?.slug] ?? 0} />
                         </Card>
+                        ))}
                     </div>
-                    <div className="grid md:col-auto md:row-2">
-                        <div className="flex flex-col w-full gap-8 mx-auto border-t border-gray-900/10 lg:mx-0 lg:border-t-0 ">
+                    <div className="flex flex-col w-full gap-8 mx-auto border-t border-gray-900/10 lg:mx-0 lg:border-t-0">
+                        <div className="grid grid-flow-col auto-cols-auto gap-4">
                             {[top2, top3].map((project) => (
                             <Card key={project?.slug}>
                                 <Article project={project} views={views[project?.slug] ?? 0} />
@@ -119,9 +90,23 @@ export default async function Projects() {
                     </div>
                     
                 </div>
-                <div className="hidden w-full h-px md:block bg-zinc-800" />
+            </section>
+            <div className="px-6 mx-auto max-w-7xl lg:px-8">
+                <div className="hidden w-full h-px md:block bg-white m-4" />
+            </div>
+            <section className="relative isolate content-center justify-center px-[25%] py-[2%]">
+                
 
-                <div className="grid grid-cols-1 gap-4 mx-auto lg:mx-0 md:grid-cols-3">
+                <div className="p-[2%] pb-[4%]">
+                    <h2 className="text-2xl font-bold tracking-tight text-zinc-100 sm:text-2xl">
+                        Other Projects I do.
+                    </h2>
+                    <p className="mt-4 text-zinc-400">
+                        Discover more about what I can do here.
+                    </p>
+                </div>
+
+                <div className="grid grid-flow-col auto-cols-full gap-4 auto-rows-full">
                     <div className="grid grid-cols-1 gap-4">
                         {sorted
                         .filter((_, i) => i % 3 === 0)
