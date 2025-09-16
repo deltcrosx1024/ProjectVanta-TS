@@ -70,7 +70,7 @@ export default async function Projects() {
                     <div className="w-full h-px bg-white" />
                 </div>
             </main>
-            <section className="relative isolate content-center justify-center px-[25%] py-[2%]">
+            <section className="relative isolate content-center justify-center px-[6.25%] py-[1%] md:px-[12.5%] lg:px-[25%] lg:py-[2%]">
                 <div className='grid col-auto row-auto gap-4 flex-[3_1_auto]'>
                     <div className="flex flex-col w-full gap-8 mx-auto border-t border-gray-900/10 lg:mx-0 lg:border-t-0 ">
                         {[featured].map((project) => (
@@ -94,7 +94,7 @@ export default async function Projects() {
             <div className="px-6 mx-auto max-w-7xl lg:px-8">
                 <div className="hidden w-full h-px md:block bg-white m-4" />
             </div>
-            <section className="relative isolate content-center justify-center px-[25%] py-[2%]">
+            <section className="relative isolate content-center justify-center px-[6.25%] py-[1%] md:px-[12.5%] px-[25%] py-[2%]">
                 
 
                 <div className="p-[2%] pb-[4%]">
