@@ -8,11 +8,8 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-  --font-custom: var(--font-saira);
-  --font-custom: var(--font-ibm-plex);
-  --font-custom-mono: var(--font-ibm-plex-mono);
+  --font-sans: var(--font-ibm-plex-sans);
+  --font-mono: var(--font-ibm-plex-mono);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -25,5 +22,4 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: 'Saira', sans-serif;
 }
