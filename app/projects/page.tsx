@@ -79,7 +79,7 @@ export default async function Projects() {
                         These are some of my highlighted projects that demonstrate my skills and expertise.
                     </p>
                 </div>
-                <div className='grid col-auto row-auto gap-4 flex-[3_1_auto]'>
+                <div className='grid grid-col-1 md:col-auto md:row-auto gap-4 md:flex-[3_1_auto]'>
                     <div className="flex flex-col w-full gap-8 mx-auto border-t border-gray-900/10 lg:mx-0 lg:border-t-0 ">
                         {[featured].map((project) => (
                         <Card key={project?.slug}>
@@ -88,7 +88,7 @@ export default async function Projects() {
                         ))}
                     </div>
                     <div className="flex flex-col w-full gap-8 mx-auto border-t border-gray-900/10 lg:mx-0 lg:border-t-0">
-                        <div className="grid grid-flow-col auto-cols-auto gap-4">
+                        <div className="grid grid-col-1 md:grid-flow-col md:auto-cols-auto gap-4">
                             {[top2, top3].map((project) => (
                             <Card key={project?.slug}>
                                 <Article project={project} views={views[project?.slug] ?? 0} />
@@ -104,7 +104,7 @@ export default async function Projects() {
                 </div>
                 
             </div>
-            <section className="relative isolate content-center justify-center px-[6.25%] py-[1%] md:px-[12.5%] px-[25%] py-[2%]">
+            <section className="relative isolate content-center justify-center px-[6.25%] py-[1%] md:px-[12.5%] lg:px-[30%] lg:py-[2%]">
 
                 <div className="p-[2%] pb-[4%]">
                     <h2 className="text-2xl font-bold tracking-tight text-zinc-100 sm:text-2xl">
@@ -115,8 +115,8 @@ export default async function Projects() {
                     </p>
                 </div>
 
-                <div className="grid grid-flow-col auto-cols-full gap-4 auto-rows-full flex-[3_3_auto]">
-                    <div className="grid grid-cols-1 gap-4">
+                <div className="grid grid-cols-1 md:grid-flow-col auto-cols-full gap-4 auto-rows-full flex-[3_3_auto]">
+                    <div className="grid grid-cols-auto gap-4">
                         {sorted
                         .filter((_, i) => i % 3 === 0)
                         .map((project) => (
@@ -125,7 +125,7 @@ export default async function Projects() {
                             </Card>
                         ))}
                     </div>
-                    <div className="grid grid-cols-1 gap-4">
+                    <div className="grid grid-cols-auto gap-4">
                         {sorted
                         .filter((_, i) => i % 3 === 1)
                         .map((project) => (
@@ -134,7 +134,7 @@ export default async function Projects() {
                             </Card>
                         ))}
                     </div>
-                    <div className="grid grid-cols-1 gap-4">
+                    <div className="grid grid-cols-auto gap-4">
                         {sorted
                         .filter((_, i) => i % 3 === 2)
                         .map((project) => (
