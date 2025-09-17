@@ -4,13 +4,6 @@ import { useState, ChangeEvent, FormEvent } from "react";
 import { Mail, Github, Linkedin } from "lucide-react";
 import { Header } from "@/app/components/nav";
 
-const navigation = [
-  { name: "Home", href: "/" },
-  { name: "Projects", href: "/projects" },
-  { name: "Contact", href: "/contact" },
-  { name: "Profiles", href: "/profiles" },
-];
-
 export default function Contact() {
   const [formData, setFormData] = useState({
     name: "",
