@@ -115,7 +115,7 @@ export default async function Projects() {
                     </p>
                 </div>
 
-                <div className="grid grid-flow-col auto-cols-full gap-4 auto-rows-full">
+                <div className="grid grid-flow-col auto-cols-full gap-4 auto-rows-full flex-[3_3_auto]">
                     <div className="grid grid-cols-1 gap-4">
                         {sorted
                         .filter((_, i) => i % 3 === 0)
