@@ -104,7 +104,7 @@ export default async function Projects() {
                 </div>
                 
             </div>
-            <section className="relative isolate content-center justify-center px-[6.25%] py-[1%] md:px-[12.5%] lg:px-[30%] lg:py-[2%]">
+            <section className="relative isolate content-center justify-center px-[6.25%] py-[1%]">
 
                 <div className="p-[2%] pb-[4%]">
                     <h2 className="text-2xl font-bold tracking-tight text-zinc-100 sm:text-2xl">
@@ -115,34 +115,12 @@ export default async function Projects() {
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-flow-col auto-cols-full gap-4 auto-rows-full flex-[3_3_auto]">
-                    <div className="grid grid-cols-auto gap-4">
-                        {sorted
-                        .filter((_, i) => i % 3 === 0)
-                        .map((project) => (
-                            <Card key={project?.slug}>
-                            <Article project={project} views={views[project?.slug] ?? 0} />
-                            </Card>
-                        ))}
-                    </div>
-                    <div className="grid grid-cols-auto gap-4">
-                        {sorted
-                        .filter((_, i) => i % 3 === 1)
-                        .map((project) => (
-                            <Card key={project?.slug}>
-                            <Article project={project} views={views[project?.slug] ?? 0} />
-                            </Card>
-                        ))}
-                    </div>
-                    <div className="grid grid-cols-auto gap-4">
-                        {sorted
-                        .filter((_, i) => i % 3 === 2)
-                        .map((project) => (
-                            <Card key={project?.slug}>
-                            <Article project={project} views={views[project?.slug] ?? 0} />
-                            </Card>
-                        ))}
-                    </div>
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                    {sorted.map((project) => (
+                    <Card key={project?.slug}>
+                        <Article project={project} views={views[project?.slug] ?? 0} />
+                    </Card>
+                    ))}
                 </div>
             </section>
         </div>
