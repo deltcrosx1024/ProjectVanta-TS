@@ -71,6 +71,14 @@ export default async function Projects() {
                 </div>
             </main>
             <section className="relative isolate content-center justify-center px-[6.25%] py-[1%] md:px-[12.5%] lg:px-[25%] lg:py-[2%]">
+                <div className="p-[2%] pb-[4%]">
+                    <h2 className="text-2xl font-bold tracking-tight text-zinc-100 sm:text-2xl">
+                        Featured Projects.
+                    </h2>
+                    <p className="mt-4 text-zinc-400">
+                        These are some of my highlighted projects that demonstrate my skills and expertise.
+                    </p>
+                </div>
                 <div className='grid col-auto row-auto gap-4 flex-[3_1_auto]'>
                     <div className="flex flex-col w-full gap-8 mx-auto border-t border-gray-900/10 lg:mx-0 lg:border-t-0 ">
                         {[featured].map((project) => (
@@ -91,11 +99,13 @@ export default async function Projects() {
                     
                 </div>
             </section>
-            <div className="px-[6.25%] py-[1%] md:px-[12.5%] px-[25%] py-[2%] mx-auto max-w-7xl">
-                <div className="hidden w-full h-px md:block bg-white m-4" />
+            <div className="pt-2 lg:pt-0">
+                <div className="px-6 pt-20 mx-auto space-y-8 max-w-7xl lg:px-8 md:space-y-16 md:pt-24 lg:pt-32">
+                    <div className="w-full h-px bg-white"/>
+                </div>
+                
             </div>
             <section className="relative isolate content-center justify-center px-[6.25%] py-[1%] md:px-[12.5%] px-[25%] py-[2%]">
-                
 
                 <div className="p-[2%] pb-[4%]">
                     <h2 className="text-2xl font-bold tracking-tight text-zinc-100 sm:text-2xl">
