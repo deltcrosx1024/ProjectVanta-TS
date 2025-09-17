@@ -91,7 +91,7 @@ export default async function Projects() {
                     
                 </div>
             </section>
-            <div className="px-6 mx-auto max-w-7xl lg:px-8">
+            <div className="px-[6.25%] py-[1%] md:px-[12.5%] px-[25%] py-[2%] mx-auto max-w-7xl">
                 <div className="hidden w-full h-px md:block bg-white m-4" />
             </div>
             <section className="relative isolate content-center justify-center px-[6.25%] py-[1%] md:px-[12.5%] px-[25%] py-[2%]">
