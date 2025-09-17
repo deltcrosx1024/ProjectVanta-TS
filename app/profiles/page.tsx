@@ -1,19 +1,129 @@
-'use client';
+"use client";
 
-import Link from 'next/link'
-import { useState } from 'react'
-import { Dialog, DialogPanel } from '@headlessui/react'
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
+import { Header } from "@/app/components/nav";
+import { Mail, Github, Linkedin, Briefcase, GraduationCap, Code } from "lucide-react";
 
-const navigation = [
-  { name: 'Projects', href: '/projects' },
-  { name: 'Contacts', href: '/contacts' },
-]
+export default function Profiles() {
 
-export default function profiles() {
- 
-    const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-    return (
-        <div className="bg-gray-900 min-h-screen min-w-full"></div>
-    );
+  return (
+    <div className="relative isolate min-h-screen bg-gray-900 py-12 px-6 lg:px-8">
+      <Header />
+      {/* Background gradient blur, similar to your existing site */}
+      <div
+        aria-hidden="true"
+        className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80 w-screen h-[100%]"
+      >
+        <div
+          style={{
+            clipPath:
+              "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
+          }}
+          className="relative left-[calc(50%-11rem)] aspect-1155/678 w-144.5 -translate-x-1/2 rotate-30 bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-288.75"
+        />
+      </div>
+
+      <main className="mx-auto max-w-7xl pt-16 lg:pt-24">
+        {/* Hero Section */}
+        <div className="text-center">
+          <h1 className="text-4xl font-bold tracking-tight text-zinc-100 sm:text-6xl">
+            [Your Name]
+          </h1>
+          <p className="mt-6 text-xl text-zinc-400">
+            [Your Professional Title]
+          </p>
+          <p className="mt-4 text-base text-zinc-500">
+            [A short, concise professional bio]
+          </p>
+        </div>
+
+        {/* Two-column Layout for Main Content */}
+        <div className="mt-16 grid grid-cols-1 gap-12 md:grid-cols-3 lg:gap-16">
+          {/* Left Column: Profile, Contact, Skills */}
+          <div className="md:col-span-1 space-y-8">
+            {/* Profile Section */}
+            <div className="p-6 rounded-xl border border-zinc-700 bg-zinc-800/20 backdrop-blur-sm">
+              <h2 className="text-2xl font-bold text-zinc-100">Profile</h2>
+              <div className="mt-4 text-zinc-400">
+                {/* Placeholder for your professional photo */}
+                <div className="w-32 h-32 mx-auto rounded-full bg-zinc-700"></div>
+                <p className="mt-4 text-center">
+                  [Your city, state/country]
+                </p>
+              </div>
+              <ul className="mt-6 space-y-4">
+                <li>
+                  <a href="#" className="flex items-center space-x-3 text-zinc-400 hover:text-white">
+                    <Mail className="h-5 w-5 flex-shrink-0" />
+                    <span>[Your Email]</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="flex items-center space-x-3 text-zinc-400 hover:text-white">
+                    <Linkedin className="h-5 w-5 flex-shrink-0" />
+                    <span>[LinkedIn Profile]</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="flex items-center space-x-3 text-zinc-400 hover:text-white">
+                    <Github className="h-5 w-5 flex-shrink-0" />
+                    <span>[GitHub Profile]</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          {/* Right Column: Experience and Education */}
+          <div className="md:col-span-2 space-y-12">
+            {/* Professional Summary */}
+            <div className="p-6 rounded-xl border border-zinc-700 bg-zinc-800/20 backdrop-blur-sm">
+              <h2 className="text-2xl font-bold text-zinc-100">Summary</h2>
+              <p className="mt-4 text-zinc-400">
+                [A more detailed professional summary, highlighting your skills and career goals. This is your chance to sell yourself to a recruiter!]
+              </p>
+            </div>
+
+            {/* Experience Section */}
+            <div className="p-6 rounded-xl border border-zinc-700 bg-zinc-800/20 backdrop-blur-sm">
+              <h2 className="text-2xl font-bold text-zinc-100">Experience</h2>
+              <ul className="mt-6 space-y-8">
+                <li>
+                  <div className="flex items-start space-x-4">
+                    <Briefcase className="h-6 w-6 text-zinc-400 flex-shrink-0 mt-1" />
+                    <div>
+                      <h3 className="text-lg font-semibold text-zinc-200">Job Title</h3>
+                      <p className="text-sm text-zinc-400">Company Name | Dates</p>
+                      <ul className="mt-2 list-disc list-inside text-zinc-400 space-y-1 text-sm">
+                        <li>[Description of your role and responsibilities.]</li>
+                        <li>[Key accomplishments or projects you worked on.]</li>
+                        <li>[Technologies used.]</li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+                {/* Add more experience list items as needed */}
+              </ul>
+            </div>
+
+            {/* Education Section */}
+            <div className="p-6 rounded-xl border border-zinc-700 bg-zinc-800/20 backdrop-blur-sm">
+              <h2 className="text-2xl font-bold text-zinc-100">Education</h2>
+              <ul className="mt-6 space-y-4">
+                <li>
+                  <div className="flex items-start space-x-4">
+                    <GraduationCap className="h-6 w-6 text-zinc-400 flex-shrink-0 mt-1" />
+                    <div>
+                      <h3 className="text-lg font-semibold text-zinc-200">Degree, Field of Study</h3>
+                      <p className="text-sm text-zinc-400">University/Institution Name | Dates Attended</p>
+                    </div>
+                  </div>
+                </li>
+                {/* Add more education list items as needed */}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  );
 }
