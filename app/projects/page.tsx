@@ -93,7 +93,7 @@ export default async function Projects() {
             </section>
             <div className="pt-2 lg:pt-0">
                 <div className="px-6 pt-20 mx-auto space-y-8 max-w-7xl lg:px-8 md:space-y-16 md:pt-24 lg:pt-32">
-                    <div className="hidden w-full h-px md:block bg-white m-4" />
+                    <div className="w-full h-px bg-white"/>
                 </div>
                 
             </div>
