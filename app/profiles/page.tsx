@@ -47,7 +47,7 @@ export default function Profiles() {
                 {/* Placeholder for your professional photo */}
                 <div className="w-32 h-32 mx-auto rounded-full bg-zinc-700"></div>
                 <p className="mt-4 text-center">
-                  [Phetchabun, Thailand | Born on 20 August 2001]
+                  [Phetchabun, Thailand | Born on 20 March 2006]
                 </p>
               </div>
               <ul className="mt-6 space-y-4">
