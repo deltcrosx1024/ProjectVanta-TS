@@ -99,12 +99,40 @@ export default function Profiles() {
                   <div className="flex items-start space-x-4">
                     <Briefcase className="h-6 w-6 text-zinc-400 flex-shrink-0 mt-1" />
                     <div>
-                      <h3 className="text-lg font-semibold text-zinc-200">Lead App Developer/Server Engineer</h3>
-                      <p className="text-sm text-zinc-400">Halliday Co, LTD. | 2022-04</p>
+                      <h3 className="text-lg font-semibold text-zinc-200">Web Developer/Discord Bot Developer</h3>
+                      <p className="text-sm text-zinc-400">Juanperfect Cooperation, LTD. | 2021-03 to 2922-01</p>
                       <ul className="mt-2 list-disc list-inside text-zinc-400 space-y-1 text-sm">
-                        <li>Lead App Developer</li>
-                        <li>Key accomplishments or projects you worked on.</li>
-                        <li>Technologies used.</li>
+                        <li>Develop Website using the legacy web2 technologies. ensuring the best user experiences and backend performance</li>
+                        <li>I develop the website for minecraft server, including shop sections, user authentication, and real-time chat features. plus the integrated database used for authenticate user with the minecraft accounts</li>
+                        <li>HTML, CSS, JavaScript, PHP, PHPMyAdmin, MySQL</li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div className="flex items-start space-x-4">
+                    <Briefcase className="h-6 w-6 text-zinc-400 flex-shrink-0 mt-1" />
+                    <div>
+                      <h3 className="text-lg font-semibold text-zinc-200">Lead App Developer/Server Engineer</h3>
+                      <p className="text-sm text-zinc-400">Halliday Co, LTD. | 2022-04 to 2022-09</p>
+                      <ul className="mt-2 list-disc list-inside text-zinc-400 space-y-1 text-sm">
+                        <li>Develop an applications for internal use, focusing on user experience and performance.</li>
+                        <li>I develop the main applications, ensuring high performance and responsiveness. working through backend of the app. Basically develop everything from scratch. Administrate the Server and the Database.</li>
+                        <li>Kotlin, Spring Boot, PostgreSQL</li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div className="flex items-start space-x-4">
+                    <Briefcase className="h-6 w-6 text-zinc-400 flex-shrink-0 mt-1" />
+                    <div>
+                      <h3 className="text-lg font-semibold text-zinc-200">Web Developer</h3>
+                      <p className="text-sm text-zinc-400">Freelance Software Developer | 2023-07 to Present</p>
+                      <ul className="mt-2 list-disc list-inside text-zinc-400 space-y-1 text-sm">
+                        <li>Develop the software and website to match the client preferences and briefing.</li>
+                        <li>I received the briefing from the client and translated their needs into technical requirements. make it happen to match the client preference. most of the time working on making website, developing Warehouse Management System(WMS) and other stuff, develop the desktop app, webapp and manage the token, Developing Discord Bot using Discord API.</li>
+                        <li>C#, .NET, ASP.NET, Next.js, TailwindCSS, MongoDB Atlas, Discord.js, VertexAI API, Google Cloud Platform, MySQLI, PHP, HTML, CSS, Javascript, React, and WinUI3</li>
                       </ul>
                     </div>
                   </div>
