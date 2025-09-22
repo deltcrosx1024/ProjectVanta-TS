@@ -46,15 +46,13 @@ export default function Profiles() {
               <h2 className="text-2xl font-bold text-zinc-100">Profile</h2>
               <div className="mt-4 text-zinc-400">
                 {/* Placeholder for your professional photo */}
-                <div className="w-32 h-32 mx-auto rounded-full bg-zinc-700">
-                  <Image
-                    src="@/public/1755046585772.jpg" // Replace with your image path
-                    alt="Boripat Kunla"
-                    width={128}
-                    height={128}
-                    className="rounded-full"
-                  />
-                </div>
+                <Image
+                  src="@/public/1755046585772.jpg" // Replace with your image path
+                  alt="Boripat Kunla"
+                  width={30}
+                  height={30}
+                  className="mx-auto rounded-full bg-zinc-700"
+                />
                 <p className="mt-4 text-center">
                   Phetchabun, Thailand | Born on 20 March 2006
                 </p>
@@ -100,7 +98,7 @@ export default function Profiles() {
                   <div className="flex items-start space-x-4">
                     <Briefcase className="h-6 w-6 text-zinc-400 flex-shrink-0 mt-1" />
                     <div>
-                      <h3 className="text-lg font-semibold text-zinc-200">Lead App Developer/server engineer</h3>
+                      <h3 className="text-lg font-semibold text-zinc-200">Lead App Developer/Server Engineer</h3>
                       <p className="text-sm text-zinc-400">Halliday Co, LTD. | 2022-04</p>
                       <ul className="mt-2 list-disc list-inside text-zinc-400 space-y-1 text-sm">
                         <li>Lead App Developer</li>
