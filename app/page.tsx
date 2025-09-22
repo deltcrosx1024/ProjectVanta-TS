@@ -1,11 +1,7 @@
+"use client";
+
 import Link from 'next/link';
 import { Header } from './components/nav';
-
-const navigation = [
-  { name: 'Projects', href: '/projects' },
-  { name: 'Contacts', href: '/contacts' },
-  { name: 'Profiles', href: '/profiles' },
-];
 
 export default function Home() {
   return (
@@ -31,8 +27,12 @@ export default function Home() {
             <div className="relative rounded-full px-4 py-1.5 text-sm font-semibold text-gray-400 ring-1 ring-white/10 hover:ring-white/20 transition-all duration-300 transform hover:scale-105">
               View my profiles and see what I am capable of doing!{' '}
               <a href="/profiles" className="font-semibold text-indigo-400 transition-colors hover:text-indigo-300">
-                <span className="absolute inset-0" aria-hidden="true" />
-                Read more <span aria-hidden="true">&rarr;</span>
+                <span className="absolute inset-0" aria-hidden="true">
+                  Read more
+                  <span aria-hidden="true">
+                    &rarr;
+                  </span>
+                </span>
               </a>
             </div>
           </div>
