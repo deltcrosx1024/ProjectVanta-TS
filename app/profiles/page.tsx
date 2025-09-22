@@ -1,6 +1,7 @@
 "use client";
 
 import { Header } from "@/app/components/nav";
+import Image from "next/image";
 import { Mail, Github, Linkedin, Briefcase, GraduationCap, Code } from "lucide-react";
 
 export default function Profiles() {
@@ -45,7 +46,15 @@ export default function Profiles() {
               <h2 className="text-2xl font-bold text-zinc-100">Profile</h2>
               <div className="mt-4 text-zinc-400">
                 {/* Placeholder for your professional photo */}
-                <div className="w-32 h-32 mx-auto rounded-full bg-zinc-700"></div>
+                <div className="w-32 h-32 mx-auto rounded-full bg-zinc-700">
+                  <Image
+                    src="@/public/1755046585772.jpg" // Replace with your image path
+                    alt="Boripat Kunla"
+                    width={128}
+                    height={128}
+                    className="rounded-full"
+                  />
+                </div>
                 <p className="mt-4 text-center">
                   Phetchabun, Thailand | Born on 20 March 2006
                 </p>
