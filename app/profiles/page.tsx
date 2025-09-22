@@ -49,8 +49,8 @@ export default function Profiles() {
                 <Image
                   src="@/public/1755046585772.jpg" // Replace with your image path
                   alt="Boripat Kunla"
-                  width={30}
-                  height={30}
+                  width={32}
+                  height={32}
                   className="mx-auto rounded-full bg-zinc-700"
                 />
                 <p className="mt-4 text-center">
