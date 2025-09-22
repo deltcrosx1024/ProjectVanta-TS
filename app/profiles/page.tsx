@@ -47,7 +47,7 @@ export default function Profiles() {
               <div className="mt-4 text-zinc-400">
                 {/* Placeholder for your professional photo */}
                 <Image
-                  src="@/public/1755046585772.jpg" // Replace with your image path
+                  src="../../public/1755046585772.jpg" // Replace with your image path
                   alt="Boripat Kunla"
                   width={32}
                   height={32}
