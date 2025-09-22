@@ -127,8 +127,8 @@ export default function Profiles() {
                   <div className="flex items-start space-x-4">
                     <Briefcase className="h-6 w-6 text-zinc-400 flex-shrink-0 mt-1" />
                     <div>
-                      <h3 className="text-lg font-semibold text-zinc-200">Web Developer</h3>
-                      <p className="text-sm text-zinc-400">Freelance Software Developer | 2023-07 to Present</p>
+                      <h3 className="text-lg font-semibold text-zinc-200">Freelance Software Developer</h3>
+                      <p className="text-sm text-zinc-400">Frelancing, Work from home | 2023-07 to Present</p>
                       <ul className="mt-2 list-disc list-inside text-zinc-400 space-y-1 text-sm">
                         <li>Develop the software and website to match the client preferences and briefing.</li>
                         <li>I received the briefing from the client and translated their needs into technical requirements. make it happen to match the client preference. most of the time working on making website, developing Warehouse Management System(WMS) and other stuff, develop the desktop app, webapp and manage the token, Developing Discord Bot using Discord API.</li>
