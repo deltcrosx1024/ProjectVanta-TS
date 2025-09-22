@@ -35,9 +35,9 @@ export default async function Projects() {
         )
         .sort(
             (a, b) =>
-              new Date(b.date ?? Number.POSITIVE_INFINITY).getTime() -
-              new Date(a.date ?? Number.POSITIVE_INFINITY).getTime(),
-          );
+            new Date(b.date ?? Number.POSITIVE_INFINITY).getTime() -
+            new Date(a.date ?? Number.POSITIVE_INFINITY).getTime(),
+        );
 
     return (
         <div className=" relative isolate px-0 py-3 lg:px-8 lg:py-14 justify-center items-center bg-gray-900">
@@ -104,7 +104,7 @@ export default async function Projects() {
                 </div>
                 
             </div>
-            <section className="relative isolate content-center justify-center px-[6.25%] py-[1%]">
+            <section className="relative isolate content-center justify-center px-[6.25%] py-[1%] md:px-[12.5%] lg:px-[25%] lg:py-[2%]">
 
                 <div className="p-[2%] pb-[4%]">
                     <h2 className="text-2xl font-bold tracking-tight text-zinc-100 sm:text-2xl">
