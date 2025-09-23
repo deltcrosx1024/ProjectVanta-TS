@@ -1,6 +1,9 @@
+"use client";
+
 import type { Project } from "contentlayer/generated";
 import Link from "next/link";
 import { Eye } from "lucide-react";
+import { motion } from "framer-motion";
 
 type Props = {
 	project: Project;
@@ -10,7 +13,11 @@ type Props = {
 export const FeaturedArticle: React.FC<Props> = ({ project, views }) => {
 	return (
 		<Link href={`/projects/${project?.slug}`}>
-			<article className="p-4 md:p-8">
+			<motion.article 
+				className="p-4 md:p-8"
+				whileHover={{ scale: 1.02, y: -5 }}
+				transition={{ type: "spring", stiffness: 300, damping: 20 }}
+			>
 				<div className="flex justify-between gap-2 items-center">
 					<span className="text-xs duration-1000 text-zinc-200 group-hover:text-white group-hover:border-zinc-200 drop-shadow-orange">
 						{project?.date ? (
@@ -34,7 +41,7 @@ export const FeaturedArticle: React.FC<Props> = ({ project, views }) => {
 				<p className="z-20 mt-4 text-sm font-bold duration-1000 text-zinc-400 group-hover:text-zinc-200">
 					{project?.description}
 				</p>
-			</article>
+			</motion.article>
 		</Link>
 	);
 };
