@@ -4,7 +4,7 @@ import { useEffect } from "react";
 
 export const ReportView: React.FC<{ slug: string }> = ({ slug }) => {
 	useEffect(() => {
-		fetch("@page/api/incr", {
+		fetch("@page/api/incr.ts", {
 			method: "POST",
 			headers: {
 				"Content-Type": "application/json",
