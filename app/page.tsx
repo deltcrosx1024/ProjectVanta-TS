@@ -27,8 +27,9 @@ export default function Home() {
               View my profiles and see what I am capable of doing!{' '}
               <a href="/profiles" className="font-semibold text-indigo-400 transition-colors hover:text-indigo-300">
                 <span className="absolute inset-0" aria-hidden="true">
-                  Read more<span aria-hidden="true">&rarr;</span>
+                  Read more
                 </span>
+                <span aria-hidden="true">&rarr;</span>
               </a>
             </div>
           </div>
