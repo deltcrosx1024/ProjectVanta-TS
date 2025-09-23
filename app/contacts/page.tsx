@@ -4,6 +4,7 @@ import { useState, ChangeEvent, FormEvent } from "react";
 // @ts-ignore
 import { Mail, Github, Linkedin } from "lucide-react";
 import { Header } from "@/app/components/nav";
+import { motion } from "framer-motion";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -42,6 +43,16 @@ export default function Contact() {
     }
   };
 
+  const formVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { staggerChildren: 0.1 } },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 },
+  };
+
   return (
     <div className="relative isolate min-h-screen bg-gray-900 py-12 px-6 lg:px-8">
       <Header />
@@ -72,12 +83,16 @@ export default function Contact() {
       <div className="mx-auto mt-16 max-w-2xl lg:mt-24">
         <div className="grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-2 lg:gap-x-16">
           {/* Contact Form */}
-          <div>
-            <h3 className="text-2xl font-bold tracking-tight text-zinc-100">
+          <motion.div
+            initial="hidden"
+            animate="visible"
+            variants={formVariants}
+          >
+            <motion.h3 variants={itemVariants} className="text-2xl font-bold tracking-tight text-zinc-100">
               Send me a message
-            </h3>
+            </motion.h3>
             <form onSubmit={handleSubmit} className="mt-8 space-y-6">
-              <div>
+              <motion.div variants={itemVariants}>
                 <label
                   htmlFor="name"
                   className="block text-sm font-medium text-zinc-400"
@@ -93,9 +108,9 @@ export default function Contact() {
                   value={formData.name}
                   onChange={handleChange}
                 />
-              </div>
+              </motion.div>
 
-              <div>
+              <motion.div variants={itemVariants}>
                 <label
                   htmlFor="email"
                   className="block text-sm font-medium text-zinc-400"
@@ -111,9 +126,9 @@ export default function Contact() {
                   value={formData.email}
                   onChange={handleChange}
                 />
-              </div>
+              </motion.div>
 
-              <div>
+              <motion.div variants={itemVariants}>
                 <label
                   htmlFor="message"
                   className="block text-sm font-medium text-zinc-400"
@@ -129,19 +144,19 @@ export default function Contact() {
                   value={formData.message}
                   onChange={handleChange}
                 />
-              </div>
+              </motion.div>
 
-              <div>
+              <motion.div variants={itemVariants}>
                 <button
                   type="submit"
                   className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-zinc-700 hover:bg-zinc-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-zinc-400"
                 >
                   Send Message
                 </button>
-              </div>
-              {status && <p className="text-center text-sm mt-4 text-zinc-400">{status}</p>}
+              </motion.div>
+              {status && <motion.p variants={itemVariants} className="text-center text-sm mt-4 text-zinc-400">{status}</motion.p>}
             </form>
-          </div>
+          </motion.div>
 
           {/* Alternative Contact Links */}
           <div className="mt-16 lg:mt-0">
@@ -149,7 +164,11 @@ export default function Contact() {
               Connect with me
             </h3>
             <ul className="mt-8 space-y-4">
-              <li>
+              <motion.li
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.5, duration: 0.5 }}
+              >
                 <a
                   href="mailto:boripat.kun@outlook.com"
                   className="flex items-center space-x-3 text-zinc-400 hover:text-white"
@@ -157,8 +176,12 @@ export default function Contact() {
                   <Mail className="h-5 w-5 flex-shrink-0" />
                   <span className="text-sm">boripat.kun@outlook.com</span>
                 </a>
-              </li>
-              <li>
+              </motion.li>
+              <motion.li
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.6, duration: 0.5 }}
+              >
                 <a
                   href="https://www.linkedin.com/in/boripat-kunla-57278b203/"
                   target="_blank"
@@ -168,8 +191,12 @@ export default function Contact() {
                   <Linkedin className="h-5 w-5 flex-shrink-0" />
                   <span className="text-sm">LinkedIn</span>
                 </a>
-              </li>
-              <li>
+              </motion.li>
+              <motion.li
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.7, duration: 0.5 }}
+              >
                 <a
                   href="https://github.com/deltcrosx1024"
                   target="_blank"
@@ -179,7 +206,7 @@ export default function Contact() {
                   <Github className="h-5 w-5 flex-shrink-0" />
                   <span className="text-sm">GitHub</span>
                 </a>
-              </li>
+              </motion.li>
             </ul>
           </div>
         </div>
