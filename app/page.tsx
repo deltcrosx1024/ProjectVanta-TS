@@ -6,6 +6,7 @@ import { Header } from './components/nav';
 export default function Home() {
   return (
     <div className="bg-gray-900 min-h-screen w-screen relative overflow-hidden">
+      <Header />
       {/* Background Clipping */}
       <div
         aria-hidden="true"
@@ -19,8 +20,6 @@ export default function Home() {
         />
       </div>
 
-      <Header />
-
       <main className="flex flex-col items-center justify-center min-h-screen px-6 py-14 lg:px-8 text-center animate-fade-in">
         <div className="relative isolate">
           <div className="hidden sm:mb-8 sm:flex sm:justify-center animate-fade-in-down">
@@ -28,8 +27,9 @@ export default function Home() {
               View my profiles and see what I am capable of doing!{' '}
               <a href="/profiles" className="font-semibold text-indigo-400 transition-colors hover:text-indigo-300">
                 <span className="absolute inset-0" aria-hidden="true">
-                  Read more<span aria-hidden="true">&rarr;</span>
+                  Read more
                 </span>
+                <span aria-hidden="true">&rarr;</span>
               </a>
             </div>
           </div>
