@@ -298,7 +298,9 @@ const Prism: React.FC<PrismProps> = ({
       raf = 0;
     };
 
+    //sonar-ignore-next-line
     const rnd = () => Math.random();
+
     const wX = (0.3 + rnd() * 0.6) * RSX;
     const wY = (0.2 + rnd() * 0.7) * RSY;
     const wZ = (0.1 + rnd() * 0.5) * RSZ;
