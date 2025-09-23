@@ -20,7 +20,15 @@ export const Card: React.FC<PropsWithChildren> = ({ children }) => {
 	const style = { maskImage, WebkitMaskImage: maskImage };
 
 	return (
-		<button onMouseMove={onMouseMove} className="overflow-hidden relative duration-700 border rounded-xl hover:bg-zinc-800/10 group md:gap-8 hover:border-zinc-400/50 border-zinc-600">
+		<motion.button 
+			onMouseMove={onMouseMove} 
+			className="overflow-hidden relative duration-700 border rounded-xl hover:bg-zinc-800/10 group md:gap-8 hover:border-zinc-400/50 border-zinc-600"
+			whileHover={{ 
+				scale: 1.03,
+				boxShadow: "0 10px 20px rgba(0, 0, 0, 0.2)"
+			}}
+			transition={{ type: "spring", stiffness: 300, damping: 20 }}
+		>
 			<div className="pointer-events-none">
 				<div className="absolute inset-0 z-0  transition duration-1000 [mask-image:linear-gradient(black,transparent)]" />
 				<motion.div
@@ -34,6 +42,6 @@ export const Card: React.FC<PropsWithChildren> = ({ children }) => {
 			</div>
 
 			{children}
-		</button>
+		</motion.button>
 	);
 };
