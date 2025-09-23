@@ -1,15 +1,16 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import { Dialog, DialogPanel } from '@headlessui/react';
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
-import Link from 'next/link';
+import { useState } from "react";
+import { Dialog, DialogPanel } from "@headlessui/react";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import Link from "next/link";
+import { motion } from "framer-motion";
 
 const navigation = [
-    { name: 'Home', href: '/' },
-	{ name: 'Projects', href: '/projects'},
-    { name: 'Contacts', href: '/contacts' },
-    { name: 'Profiles', href: '/profiles' },
+    { name: "Home", href: "/" },
+	{ name: "Projects", href: "/projects"},
+    { name: "Contacts", href: "/contacts" },
+    { name: "Profiles", href: "/profiles" },
 ];
 
 export function Header() {
@@ -40,15 +41,26 @@ export function Header() {
                 </div>
                 <div className="hidden lg:flex lg:gap-x-12">
                     {navigation.map((item) => (
-                        <Link key={item.name} href={item.href} className="text-sm/6 font-semibold text-white">
-                            {item.name}
-                        </Link>
+                        <motion.div
+                            key={item.name}
+                            whileHover={{ y: -3, scale: 1.05, color: "#4299e1" }}
+                            transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                        >
+                            <Link href={item.href} className="text-sm/6 font-semibold text-white">
+                                {item.name}
+                            </Link>
+                        </motion.div>
                     ))}
                 </div>
                 <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-                    <Link href="https://github.com/deltcrosx1024" className="text-sm/6 font-semibold text-white">
-                        GitHub <span aria-hidden="true">&rarr;</span>
-                    </Link>
+                    <motion.div
+                        whileHover={{ y: -3, scale: 1.05, color: "#4299e1" }}
+                        transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                    >
+                        <Link href="https://github.com/deltcrosx1024" className="text-sm/6 font-semibold text-white">
+                            GitHub <span aria-hidden="true">&rarr;</span>
+                        </Link>
+                    </motion.div>
                 </div>
             </nav>
             <Dialog open={mobileMenuOpen} onClose={setMobileMenuOpen} className="lg:hidden">
