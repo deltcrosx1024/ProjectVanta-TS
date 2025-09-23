@@ -3,9 +3,6 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-}
-
-@theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-ibm-plex-sans);
@@ -24,3 +21,32 @@ body {
   color: var(--foreground);
   font-family: 'IBM Plex Sans', sans-serif !important;
 }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate-fade-in {
+  animation: fadeIn 1.5s ease-out forwards;
+}
+.animate-fade-in-down {
+  animation: fadeInDown 1s ease-out forwards;
+}
+.animation-delay-300 {
+  animation-delay: 300ms;
+}
+
