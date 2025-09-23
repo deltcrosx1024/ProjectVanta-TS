@@ -22,7 +22,7 @@ export const Card: React.FC<PropsWithChildren> = ({ children }) => {
 	return (
 		<motion.button 
 			onMouseMove={onMouseMove} 
-			className="overflow-hidden relative duration-700 border rounded-xl hover:bg-zinc-800/10 group md:gap-8 hover:border-zinc-400/50 border-zinc-600"
+			className="overflow-hidden relative duration-700 border rounded-xl bg-black hover:bg-zinc-800 group md:gap-8 hover:border-zinc-400/50 border-zinc-600"
 			whileHover={{ 
 				scale: 1.03,
 				boxShadow: "0 10px 20px rgba(0, 0, 0, 0.2)"
