@@ -5,7 +5,6 @@ import { FeaturedArticle } from './featuredarticle';
 import { Header } from '@/app/components/nav';
 import { Card } from '@/app/components/card';
 import BackgroundDarkVeil from '@/app/components/bg_darkveil';
-
 const redis = Redis.fromEnv();
 
 export const revalidate = 60;
@@ -40,6 +39,7 @@ export default async function Projects() {
 
     return (
         <div className=" relative isolate px-0 py-3 lg:px-8 lg:py-14 justify-center items-center bg-gray-900">
+            
             <BackgroundDarkVeil />
             {/*Contents*/}
             <Header />
@@ -58,6 +58,7 @@ export default async function Projects() {
                 </div>
             </main>
             <section className="relative isolate content-center justify-center px-[6.25%] py-[1%] md:px-[12.5%] lg:px-[25%] lg:py-[2%]">
+                
                 <div className="p-[2%] pb-[4%]">
                     <h2 className="text-2xl font-bold tracking-tight text-zinc-100 sm:text-2xl">
                         Featured Projects.
