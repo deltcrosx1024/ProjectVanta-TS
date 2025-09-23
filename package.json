@@ -24,6 +24,7 @@
     "gsap": "^3.13.0",
     "lucide-react": "^0.544.0",
     "markdown-wasm": "^1.2.0",
+    "motion": "^12.23.19",
     "next": "15.5.3",
     "next-contentlayer": "^0.3.4",
     "ogl": "^1.0.11",
