@@ -13,13 +13,14 @@ type Props = {
 export const Article: React.FC<Props> = ({ project, views }) => {
 	return (
 		<Link href={`/projects/${project?.slug}`}>
-			<motion.article 
-				className="p-4 md:p-8 grid"
-				whileHover={{ scale: 1.02, y: -5 }}
+			<motion.article
+				className="p-4 md:p-8 flex flex-col h-full"
+				whileHover={{ scale: 1.03, y: -5 }}
 				transition={{ type: "spring", stiffness: 300, damping: 20 }}
 			>
-				<div className="absolute top-4 left-4 right-4 z-10 flex justify-between items-center">
-					<span className="text-xs duration-1000 text-zinc-200 group-hover:text-white group-hover:border-zinc-200 drop-shadow-orange">
+				{/* Card Header with Date and Views */}
+				<div className="flex justify-between items-center z-10">
+					<span className="text-xs text-zinc-200 duration-1000 group-hover:text-white drop-shadow-orange">
 						{project?.date ? (
 							<time dateTime={new Date(project?.date).toISOString()}>
 								{Intl.DateTimeFormat(undefined, { dateStyle: "medium" }).format(
@@ -35,12 +36,15 @@ export const Article: React.FC<Props> = ({ project, views }) => {
 						{Intl.NumberFormat("en-US", { notation: "compact" }).format(views)}
 					</span>
 				</div>
-				<h2 className="z-20 text-xl text-wrap font-medium duration-1000 lg:text-3xl text-zinc-200 group-hover:text-white font-display mt-8">
-					{project?.title}
-				</h2>
-				<p className="z-20 mt-4 text-sm text-wrap duration-1000 text-zinc-400 group-hover:text-zinc-200">
-					{project?.description}
-				</p>
+				{/* Main Article Content */}
+				<div className="mt-8 flex-grow">
+					<h2 className="z-20 text-xl text-wrap font-medium duration-1000 lg:text-3xl text-zinc-200 group-hover:text-white font-display">
+						{project?.title}
+					</h2>
+					<p className="z-20 mt-4 text-sm text-wrap duration-1000 text-zinc-400 group-hover:text-zinc-200">
+						{project?.description}
+					</p>
+				</div>
 			</motion.article>
 		</Link>
 	);
