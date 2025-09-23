@@ -4,6 +4,7 @@ import type { Project } from "contentlayer/generated";
 import Link from "next/link";
 import { Eye } from "lucide-react";
 import { motion } from "framer-motion";
+import CountUp from "@/app/components/countup";
 
 type Props = {
 	project: Project;
@@ -33,7 +34,7 @@ export const Article: React.FC<Props> = ({ project, views }) => {
 					</span>
 					<span className="text-zinc-500 text-xs flex items-center gap-1">
 						<Eye className="w-4 h-4" />{" "}
-						{Intl.NumberFormat("en-US", { notation: "compact" }).format(views)}
+						<CountUp to={views} duration={0.5} separator="," />
 					</span>
 				</div>
 				{/* Main Article Content */}
