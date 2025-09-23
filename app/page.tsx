@@ -4,14 +4,13 @@ import Link from 'next/link';
 import { Header } from './components/nav';
 import SplitText from './components/splittext';
 import BackgroundDarkVeil from './components/bg_darkveil';
-
+import GradientText from './components/textgradient';
 const handleAnimationComplete = () => {
   console.log('Animation complete!');
 };
 
 export default function Home() {
   return (
-
     <div className="min-h-screen w-screen relative isolate overflow-hidden">
       <Header />
       <BackgroundDarkVeil />
@@ -64,7 +63,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-      
     </div>
   );
 }

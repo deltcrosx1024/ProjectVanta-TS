@@ -20,6 +20,7 @@ export const Card: React.FC<PropsWithChildren> = ({ children }) => {
 	const style = { maskImage, WebkitMaskImage: maskImage };
 
 	return (
+		
 		<motion.button 
 			onMouseMove={onMouseMove} 
 			className="overflow-hidden relative duration-700 border rounded-xl bg-black hover:bg-zinc-800 group md:gap-8 hover:border-zinc-400/50 border-zinc-600"
@@ -43,5 +44,6 @@ export const Card: React.FC<PropsWithChildren> = ({ children }) => {
 
 			{children}
 		</motion.button>
+
 	);
 };
