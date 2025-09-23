@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, ChangeEvent, FormEvent } from "react";
+// @ts-ignore
 import { Mail, Github, Linkedin } from "lucide-react";
 import { Header } from "@/app/components/nav";
 
