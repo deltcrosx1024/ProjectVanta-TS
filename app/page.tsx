@@ -6,6 +6,7 @@ import { Header } from './components/nav';
 export default function Home() {
   return (
     <div className="bg-gray-900 min-h-screen w-screen relative overflow-hidden">
+      <Header />
       {/* Background Clipping */}
       <div
         aria-hidden="true"
@@ -18,8 +19,6 @@ export default function Home() {
           className="relative left-[calc(50%-11rem)] aspect-1155/678 w-[36.09rem] -translate-x-1/2 rotate-30 bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-70 sm:left-[calc(50%-30rem)] sm:w-[72.18rem]"
         />
       </div>
-
-      <Header />
 
       <main className="flex flex-col items-center justify-center min-h-screen px-6 py-14 lg:px-8 text-center animate-fade-in">
         <div className="relative isolate">
