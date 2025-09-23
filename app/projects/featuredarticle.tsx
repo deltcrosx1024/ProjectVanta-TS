@@ -1,6 +1,9 @@
+"use client";
+
 import type { Project } from "contentlayer/generated";
 import Link from "next/link";
 import { Eye } from "lucide-react";
+import { motion } from "framer-motion";
 
 type Props = {
 	project: Project;
@@ -10,8 +13,13 @@ type Props = {
 export const FeaturedArticle: React.FC<Props> = ({ project, views }) => {
 	return (
 		<Link href={`/projects/${project?.slug}`}>
-			<article className="p-4 md:p-8">
-				<div className="flex justify-between gap-2 items-center">
+			<motion.article
+				className="p-4 md:p-8 flex flex-col h-full"
+				whileHover={{ scale: 1.03, y: -5 }}
+				transition={{ type: "spring", stiffness: 300, damping: 20 }}
+			>
+				{/* Card Header with Date and Views */}
+				<div className="flex justify-between gap-2 items-center z-10">
 					<span className="text-xs duration-1000 text-zinc-200 group-hover:text-white group-hover:border-zinc-200 drop-shadow-orange">
 						{project?.date ? (
 							<time dateTime={new Date(project?.date).toISOString()}>
@@ -28,13 +36,16 @@ export const FeaturedArticle: React.FC<Props> = ({ project, views }) => {
 						{Intl.NumberFormat("en-US", { notation: "compact" }).format(views)}
 					</span>
 				</div>
-				<h2 className="z-20 text-2xl font-bold duration-1000 lg:text-4xl text-zinc-200 group-hover:text-white font-display">
-					{project?.title}
-				</h2>
-				<p className="z-20 mt-4 text-sm font-bold duration-1000 text-zinc-400 group-hover:text-zinc-200">
-					{project?.description}
-				</p>
-			</article>
+				{/* Main Article Content */}
+				<div className="mt-4 flex-grow flex flex-col items-center justify-center text-center">
+					<h2 className="z-20 text-2xl font-bold duration-1000 lg:text-4xl text-zinc-200 group-hover:text-white font-display">
+						{project?.title}
+					</h2>
+					<p className="z-20 mt-4 text-sm font-bold duration-1000 text-zinc-400 group-hover:text-zinc-200">
+						{project?.description}
+					</p>
+				</div>
+			</motion.article>
 		</Link>
 	);
 };

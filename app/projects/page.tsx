@@ -45,13 +45,13 @@ export default async function Projects() {
             <div
                 aria-hidden="true"
                 className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80 w-screen h-[100%]"
-                >
+            >
                 <div
                     style={{
-                    clipPath:
-                        'polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)',
+                        clipPath:
+                            'polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)',
                     }}
-                    className="relative left-[calc(50%-11rem)] aspect-1155/678 w-144.5 -translate-x-1/2 rotate-30 bg-linear-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-288.75"
+                    className="relative left-[calc(50%-11rem)] aspect-1155/678 w-144.5 -translate-x-1/2 rotate-30 bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-288.75"
                 />
             </div>
             {/*Contents*/}
@@ -79,22 +79,16 @@ export default async function Projects() {
                         These are some of my highlighted projects that demonstrate my skills and expertise.
                     </p>
                 </div>
-                <div className='grid grid-col-1 md:col-auto md:row-auto gap-4 md:flex-[3_1_auto]'>
-                    <div className="flex flex-col w-full gap-8 mx-auto border-t border-gray-900/10 lg:mx-0 lg:border-t-0 ">
-                        {[featured].map((project) => (
+                <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
+                    <Card>
+                        <FeaturedArticle project={featured} views={views[featured?.slug] ?? 0} />
+                    </Card>
+                    <div className="grid grid-col-1 gap-4">
+                        {[top2, top3].map((project) => (
                         <Card key={project?.slug}>
-                            <FeaturedArticle project={project} views={views[project?.slug] ?? 0} />
+                            <Article project={project} views={views[project?.slug] ?? 0} />
                         </Card>
                         ))}
-                    </div>
-                    <div className="flex flex-col w-full gap-8 mx-auto border-t border-gray-900/10 lg:mx-0 lg:border-t-0">
-                        <div className="grid grid-col-1 md:grid-flow-col md:auto-cols-auto gap-4">
-                            {[top2, top3].map((project) => (
-                            <Card key={project?.slug}>
-                                <Article project={project} views={views[project?.slug] ?? 0} />
-                            </Card>
-                            ))}
-                        </div>
                     </div>
                 </div>
             </section>
@@ -102,10 +96,8 @@ export default async function Projects() {
                 <div className="px-6 mx-auto max-w-7xl lg:px-8">
                     <div className="w-full h-px bg-white"/>
                 </div>
-                
             </div>
             <section className="relative isolate content-center justify-center px-[6.25%] py-[1%] md:px-[12.5%] lg:px-[25%] lg:py-[2%]">
-
                 <div className="p-[2%] pb-[4%]">
                     <h2 className="text-2xl font-bold tracking-tight text-zinc-100 sm:text-2xl">
                         Other Projects I do.
@@ -114,7 +106,6 @@ export default async function Projects() {
                         Discover more about what I can do here.
                     </p>
                 </div>
-
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                     {sorted.map((project) => (
                     <Card key={project?.slug}>
@@ -124,6 +115,5 @@ export default async function Projects() {
                 </div>
             </section>
         </div>
-
     );
 }
