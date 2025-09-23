@@ -67,7 +67,7 @@ export default async function Projects() {
                             software development.
                         </p>
                     </div>
-                    <div className="w-full h-px bg-white" />
+                    <div className="w-full h-px bg-gray-700" />
                 </div>
             </main>
             <section className="relative isolate content-center justify-center px-[6.25%] py-[1%] md:px-[12.5%] lg:px-[25%] lg:py-[2%]">
@@ -94,7 +94,7 @@ export default async function Projects() {
             </section>
             <div className="pt-2 lg:pt-0">
                 <div className="px-6 mx-auto max-w-7xl lg:px-8">
-                    <div className="w-full h-px bg-white"/>
+                    <div className="w-full h-px bg-gray-700"/>
                 </div>
             </div>
             <section className="relative isolate content-center justify-center px-[6.25%] py-[1%] md:px-[12.5%] lg:px-[25%] lg:py-[2%]">
