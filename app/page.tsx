@@ -4,7 +4,9 @@ import Link from 'next/link';
 import { Header } from './components/nav';
 import SplitText from './components/splittext';
 import BackgroundDarkVeil from './components/bg_darkveil';
-import { Analytics } from "@vercel/analytics/next"
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next"
+
 const handleAnimationComplete = () => {
   console.log('Animation complete!');
 };
@@ -13,6 +15,7 @@ export default function Home() {
   return (
     <div className="min-h-screen w-screen relative isolate overflow-hidden">
       <Analytics />
+      <SpeedInsights />
       <Header />
       <BackgroundDarkVeil />
       <div className="flex flex-col items-center justify-center min-h-screen px-6 py-14 lg:px-8 text-center animate-fade-in">

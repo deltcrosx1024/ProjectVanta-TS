@@ -5,7 +5,8 @@ import { Header } from "./header";
 import "./mdx.css";
 import { ReportView } from "./view";
 import { Redis } from "@upstash/redis";
-import { Analytics } from "@vercel/analytics/next"
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export const revalidate = 60;
 
@@ -39,6 +40,7 @@ export default async function PostPage({ params }: Props) {
   return (
     <div className="bg-zinc-50 min-h-screen">
       <Analytics />
+      <SpeedInsights />
       <Header project={project} views={views} />
       <ReportView slug={project.slug} />
 

@@ -7,6 +7,7 @@ import { Header } from "@/app/components/nav";
 import { motion } from "framer-motion";
 import BackgroundDarkVeil from '@/app/components/bg_darkveil';
 import { Analytics } from "@vercel/analytics/next"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -58,6 +59,7 @@ export default function Contact() {
   return (
     <div className="relative isolate min-h-screen bg-gray-900 px-6 py-14 lg:px-8">
         <Analytics />
+        <SpeedInsights />
         <Header />
         <BackgroundDarkVeil />
         <div className="mx-auto max-w-2xl text-center lg:max-w-4xl pt-16">
