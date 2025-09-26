@@ -17,6 +17,7 @@
     "@tailwindcss/cli": "^4.1.13",
     "@types/three": "^0.180.0",
     "@upstash/redis": "^1.35.3",
+    "@vercel/analytics": "^1.5.0",
     "autoprefixer": "^10.4.21",
     "concurrently": "^9.2.1",
     "contentlayer": "^0.3.4",
