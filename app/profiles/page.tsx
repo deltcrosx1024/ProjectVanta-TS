@@ -7,6 +7,8 @@ import { Mail, Briefcase, GraduationCap } from "lucide-react";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import BackgroundDarkVeil from '@/app/components/bg_darkveil';
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 // A reusable component to animate sections as they enter the viewport
 const AnimatedSection = ({ children, delay = 0 }: { children: React.ReactNode; delay?: number }) => {
@@ -28,6 +30,8 @@ const AnimatedSection = ({ children, delay = 0 }: { children: React.ReactNode; d
 export default function Profiles() {
   return (
     <div className="relative isolate min-h-screen w-screen bg-gray-900 py-12 px-6 lg:px-8">
+      <Analytics />
+      <SpeedInsights />
       {/* Background gradient blur, similar to your existing site */}
       <Header />
       <BackgroundDarkVeil />
