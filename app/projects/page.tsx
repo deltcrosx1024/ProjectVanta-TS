@@ -5,6 +5,7 @@ import { FeaturedArticle } from './featuredarticle';
 import { Header } from '@/app/components/nav';
 import { Card } from '@/app/components/card';
 import { Analytics } from "@vercel/analytics/next"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import BackgroundDarkVeil from '@/app/components/bg_darkveil';
 const redis = Redis.fromEnv();
 
@@ -41,6 +42,7 @@ export default async function Projects() {
     return (
         <div className=" relative isolate px-0 py-3 lg:px-8 lg:py-14 justify-center items-center bg-gray-900">
             <Analytics />
+            <SpeedInsights />
             <BackgroundDarkVeil />
             {/*Contents*/}
             <Header />
