@@ -55,8 +55,8 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 async function sendEmail({ name, email, message }: { name: string; email: string; message: string }) {
   try {
     const data = await resend.emails.send({
-      from: `${email}`,
-      to: 'boripat.kun@outlook.com',
+      from: `onboarding@resend.dev`,
+      to: ['boripat.kun@outlook.com'],
       subject: 'Contact Form Submission',
       html: `<p><strong>Name:</strong> ${name}</p><p><strong>Email:</strong> ${email}</p><p><strong>Message:</strong> ${message}</p>`,
     });
