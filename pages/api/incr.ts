@@ -6,7 +6,10 @@ export const config = {
   runtime: "edge",
 };
 
+await redis.ping();
+
 export default async function incr(req: NextRequest): Promise<NextResponse> {
+  console.log("API /api/incr called");
   if (req.method !== "POST") {
     return new NextResponse("use POST", { status: 405 });
   }
