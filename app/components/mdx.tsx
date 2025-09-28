@@ -10,45 +10,30 @@ function clsx(...args: any) {
 const components = {
 	h1: ({ className, ...props }) => (
 		// eslint-disable-next-line jsx-a11y/heading-has-content
-		<h1
-			className={clsx(
-				"mt-2 scroll-m-20 text-4xl font-bold tracking-tight",
-				className,
-			)}
-			{...props}
-		/>
+		<h1 className={clsx("mt-2 scroll-m-20 text-4xl font-bold tracking-tight", className,)}{...props}/>
 	),
 	h2: ({ className, ...props, children }) => (
-		<h2 className={clsx("mt-10 scroll-m-20 border-b border-b-zinc-800 pb-1 text-3xl font-semibold tracking-tight first:mt-0", className,)} {...props}>
-			{children}
-		</h2>
+		// eslint-disable-next-line jsx-a11y/heading-has-content
+		<h2 className={clsx("mt-10 scroll-m-20 border-b border-b-zinc-800 pb-1 text-3xl font-semibold tracking-tight first:mt-0", className,)} {...props}/>
 	),
 	h3: ({ className, ...props }) => (
-		<h3 className={clsx("mt-8 scroll-m-20 text-2xl font-semibold tracking-tight", className,)}{...props}>
-			{children}
-		</h3>
+		// eslint-disable-next-line jsx-a11y/heading-has-content
+		<h3 className={clsx("mt-8 scroll-m-20 text-2xl font-semibold tracking-tight", className,)}{...props}/>
 	),
 	h4: ({ className, ...props }) => (
-		<h4 className={clsx("mt-8 scroll-m-20 text-xl font-semibold tracking-tight", className,)}{...props}>
-			{children}
-		</h4>
+		// eslint-disable-next-line jsx-a11y/heading-has-content
+		<h4 className={clsx("mt-8 scroll-m-20 text-xl font-semibold tracking-tight", className,)}{...props}/>
 	),
 	h5: ({ className, ...props }) => (
 		// eslint-disable-next-line jsx-a11y/heading-has-content
-		<h5 className={clsx("mt-8 scroll-m-20 text-lg font-semibold tracking-tight", className,)}{...props}>
-			{children}
-		</h5>
+		<h5 className={clsx("mt-8 scroll-m-20 text-lg font-semibold tracking-tight", className,)}{...props}/>
 	),
 	h6: ({ className, ...props }) => (
 		// eslint-disable-next-line jsx-a11y/heading-has-content
-		<h6 className={clsx("mt-8 scroll-m-20 text-base font-semibold tracking-tight", className,)}{...props}>
-			{children}
-		</h6>
+		<h6 className={clsx("mt-8 scroll-m-20 text-base font-semibold tracking-tight", className,)}{...props}/>
 	),
 	a: ({ className, ...props }) => (
-		<Link className={clsx("font-medium text-zinc-900 underline underline-offset-4",className,)}{...props}>
-			{children}
-		</Link>
+		<Link className={clsx("font-medium text-zinc-900 underline underline-offset-4",className,)}{...props}/>
 	),
 	p: ({ className, ...props }) => (
 		<p className={clsx("leading-7 [&:not(:first-child)]:mt-6", className)}{...props}/>
@@ -88,6 +73,7 @@ const components = {
 	),
 	table: ({ className, ...props }: React.HTMLAttributes<HTMLTableElement>) => (
 		<div className="w-full my-6 overflow-y-auto">
+			{/* eslint-disable-next-line */}
 			<table className={clsx("w-full", className)} {...props} />
 		</div>
 	),
