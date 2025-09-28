@@ -41,7 +41,7 @@ export default async function incr(req: NextRequest): Promise<NextResponse> {
     // deduplicate the ip for each slug
     const isNew = await redis.set(["deduplicate", hash, slug].join(":"), true, {
       nx: true,
-      px: 200,
+      ex: 24 * 60 * 60,
     });
     if (!isNew) {
       return new NextResponse(null, { status: 202 });
