@@ -11,11 +11,10 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 export const revalidate = 60;
 
 type Props = {
-  params: {
-    slug: string;
+  readonly params: {
+    readonly slug: string;
   };
 };
-
 const redis = Redis.fromEnv();
 
 export async function generateStaticParams(): Promise<Props["params"][]> {
