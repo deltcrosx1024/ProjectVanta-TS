@@ -14,11 +14,8 @@
     "@heroicons/react": "^2.2.0",
     "@next/font": "^14.2.15",
     "@next/mdx": "^15.5.3",
-<<<<<<< HEAD
-=======
     "@react-email/components": "^0.5.5",
     "@react-email/render": "^1.3.1",
->>>>>>> e83dfa3d0c3725752b22b5de8536d0d54d82b140
     "@tailwindcss/cli": "^4.1.13",
     "@types/three": "^0.180.0",
     "@upstash/redis": "^1.35.3",
@@ -45,10 +42,7 @@
     "rehype-pretty-code": "^0.14.1",
     "rehype-slug": "^6.0.0",
     "remark-gfm": "^4.0.1",
-<<<<<<< HEAD
-=======
     "resend": "^6.1.0",
->>>>>>> e83dfa3d0c3725752b22b5de8536d0d54d82b140
     "rome": "^12.1.3",
     "three": "^0.180.0",
     "vercel": "^48.1.2"
