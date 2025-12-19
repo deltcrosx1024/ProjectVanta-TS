@@ -15,9 +15,10 @@
     "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve",
+    "jsx": "react-jsx",
+    "ignoreDeprecations": "6.0",
     "incremental": true,
-    "baseUrl": ".",
+    "baseUrl": "./",
     "rootDir": "",
     "paths": {
       "@/*": [
@@ -29,7 +30,7 @@
     },
     "plugins": [
       {
-        "name": "next",
+        "name": "next"
       }
     ]
   },
@@ -38,8 +39,11 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    ".contentlayer/generated"
-, "contentlayer.config.js", "next.config.ts"  ],
+    ".contentlayer/generated",
+    "contentlayer.config.js",
+    "next.config.ts",
+    ".next/dev/types/**/*.ts"
+  ],
   "exclude": [
     "node_modules"
   ]

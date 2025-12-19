@@ -14,6 +14,10 @@ const nextConfig = {
         loaders: ['@svgr/webpack'],
         as: '*.tsx',
       },
+      '*.mdx': {
+        loaders: ['@mdx-js/loader'],
+        as: '*.tsx',
+      },
     },
   },
 };
