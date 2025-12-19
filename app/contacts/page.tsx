@@ -182,11 +182,11 @@ export default function Contact() {
                 transition={{ delay: 0.5, duration: 0.5 }}
               >
                 <a
-                  href="mailto:boripat.kun@outlook.com"
+                  href="mailto:flamlaxcaster@gmail.com"
                   className="flex items-center space-x-3 text-zinc-400 hover:text-white"
                 >
                   <Mail className="h-5 w-5 flex-shrink-0" />
-                  <span className="text-sm">boripat.kun@outlook.com</span>
+                  <span className="text-sm">flamlaxcaster@gmail.com</span>
                 </a>
               </motion.li>
               <motion.li
