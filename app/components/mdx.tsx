@@ -12,7 +12,7 @@ const components = {
 		// eslint-disable-next-line jsx-a11y/heading-has-content
 		<h1 className={clsx("mt-2 scroll-m-20 text-4xl font-bold tracking-tight", className,)}{...props}/>
 	),
-	h2: ({ className, ...props, children }) => (
+	h2: ({ className, children, ...props}) => (
 		// eslint-disable-next-line jsx-a11y/heading-has-content
 		<h2 className={clsx("mt-10 scroll-m-20 border-b border-b-zinc-800 pb-1 text-3xl font-semibold tracking-tight first:mt-0", className,)} {...props}/>
 	),

@@ -1,9 +1,6 @@
 import { Redis } from "@upstash/redis";
 import { NextRequest, NextResponse } from "next/server";
-<<<<<<< HEAD
-=======
 import { Resend } from "resend";
->>>>>>> e83dfa3d0c3725752b22b5de8536d0d54d82b140
 
 const redis = Redis.fromEnv();
 export const config = {
@@ -43,14 +40,6 @@ export default async function contact(req: Readonly<NextRequest>): Promise<NextR
   if (count > 5) {
     return new NextResponse("rate limit exceeded", { status: 429 });
   }
-<<<<<<< HEAD
-
-  // TODO: Send email using an external API (Resend, SendGrid, etc.)
-  // Example:
-  // await fetch("https://api.resend.com/emails", { ... });
-
-  return new NextResponse("OK", { status: 200 });
-=======
   try {
     await sendEmail({ name, email, message });
   } catch (error) {
@@ -77,5 +66,4 @@ async function sendEmail({ name, email, message }: { name: string; email: string
     console.error('Failed to send email:', error);
     throw error;
   }
->>>>>>> e83dfa3d0c3725752b22b5de8536d0d54d82b140
 }
