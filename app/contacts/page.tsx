@@ -13,6 +13,7 @@ export default function Contact() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
+    subject: "",
     message: "",
   });
   const [status, setStatus] = useState<null | string>(null);
@@ -40,7 +41,7 @@ export default function Contact() {
 
       if (response.status === 200) {
         setStatus("Message sent successfully!");
-        setFormData({ name: "", email: "", message: "" });
+        setFormData({ name: "", email: "", subject: "", message: "" });
       } else if (response.status === 429) {
         setStatus("Rate limit exceeded. Please try again later.");
       } else if (response.status === 400) {
@@ -135,6 +136,26 @@ export default function Contact() {
 
               <motion.div variants={itemVariants}>
                 <label
+                  htmlFor="subject"
+                  className="block text-sm font-medium text-zinc-400"
+                >
+                  Subject
+                </label>
+                <input
+                  id="subject"
+                  name="subject"
+                  type="text"
+                  required
+                  maxLength={100}
+                  className="mt-1 block w-full appearance-none rounded-md border border-zinc-700 bg-zinc-800 px-3 py-2 text-white placeholder-zinc-500 shadow-sm focus:border-zinc-400 focus:outline-none focus:ring-zinc-400 sm:text-sm"
+                  value={formData.subject}
+                  onChange={handleChange}
+                  disabled={loading}
+                />
+              </motion.div>
+
+              <motion.div variants={itemVariants}>
+                <label
                   htmlFor="message"
                   className="block text-sm font-medium text-zinc-400"
                 >
@@ -158,6 +179,8 @@ export default function Contact() {
                   type="submit"
                   className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-zinc-700 hover:bg-zinc-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-zinc-400"
                   disabled={loading}
+
+            
                 >
                   {loading ? "Sending..." : "Send Message"}
                 </button>
@@ -182,11 +205,11 @@ export default function Contact() {
                 transition={{ delay: 0.5, duration: 0.5 }}
               >
                 <a
-                  href="mailto:flamlaxcaster@gmail.com"
+                  href="mailto:boripat.kun@outlook.com"
                   className="flex items-center space-x-3 text-zinc-400 hover:text-white"
                 >
                   <Mail className="h-5 w-5 flex-shrink-0" />
-                  <span className="text-sm">flamlaxcaster@gmail.com</span>
+                  <span className="text-sm">boripat.kun@outlook.com</span>
                 </a>
               </motion.li>
               <motion.li
