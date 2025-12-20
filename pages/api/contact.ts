@@ -15,16 +15,19 @@ export default async function contact(req: Readonly<NextRequest>): Promise<NextR
     return new NextResponse("use application/json", { status: 415 });
   }
   const body = await req.json();
-  const { name, email, message } = body;
+  const { name, email, subject, message } = body;
   if (
     typeof name !== "string" ||
     typeof email !== "string" ||
+    typeof subject !== "string" ||
     typeof message !== "string" ||
     !name ||
     !email ||
+    !subject ||
     !message ||
     name.length > 100 ||
     email.length > 100 ||
+    subject.length > 100 ||
     message.length > 1000
   ) {
     return new NextResponse("invalid fields", { status: 400 });
@@ -41,7 +44,7 @@ export default async function contact(req: Readonly<NextRequest>): Promise<NextR
     return new NextResponse("rate limit exceeded", { status: 429 });
   }
   try {
-    await sendEmail({ name, email, message });
+    await sendEmail({ name, email, subject, message });
   } catch (error) {
     console.error("Failed to send email", error);
     return new NextResponse("Failed to send email", { status: 500 });
@@ -52,13 +55,16 @@ export default async function contact(req: Readonly<NextRequest>): Promise<NextR
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
-async function sendEmail({ name, email, message }: { name: string; email: string; message: string }) {
+async function sendEmail({ name, email, subject, message }: { name: string; email: string; subject: string; message: string }) {
   try {
     const data = await resend.emails.send({
-      from: `onboarding@resend.dev`,
-      to: ['boripat.kun@outlook.com'],
-      subject: 'Contact Form Submission',
-      html: `<p><strong>Name:</strong> ${name}</p><p><strong>Email:</strong> ${email}</p><p><strong>Message:</strong> ${message}</p>`,
+      from: 'New Contact Notification <onboarding@resend.dev>',
+      to: ['githubdcx@outlook.com'],
+      subject: subject,
+      html: `<p><strong>Name:</strong> ${name}</p>
+      <p><strong>Email:</strong> ${email}</p>
+      <p><strong>Subject:</strong> ${subject}</p>
+      <p><strong>Message:</strong> ${message}</p>`,
     });
 
     console.log('Email sent successfully:', data);
