@@ -72,7 +72,7 @@ export default function Profiles() {
                     />
                   </div>
                   <p className="mt-4 text-center">
-                    Phetchabun, Thailand | Born on 20 March 2006
+                    Thailand, Developer since 2019
                   </p>
                 </div>
                 <ul className="mt-6 space-y-4">
