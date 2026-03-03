@@ -1,4 +1,6 @@
 ignoredBuiltDependencies:
+  - '@vercel/speed-insights'
+  - canvas
   - contentlayer
   - esbuild
   - protobufjs
